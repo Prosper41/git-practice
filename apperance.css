@@ -1,60 +1,88 @@
-/* Global Styling */
+/* --- GLOBAL STYLING --- */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f5f6fa;
+    background: linear-gradient(to bottom right, #eef2f3, #dfe9f3);
     margin: 0;
     padding: 0;
-    color: #333;
-}
-
-/* Main Container */
-.container {
-    background: #fff;
-    max-width: 800px;
-    padding: 40px;
-    margin: 40px auto;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    line-height: 1.6;
-}
-
-/* Headings */
-h1 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
     color: #2c3e50;
 }
 
-h2 {
-    margin-top: 30px;
-    color: #34495e;
+.container {
+    background: #ffffff;
+    max-width: 900px;
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Lists */
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- HEADINGS --- */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #1a5276;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    margin-top: 45px;
+    color: #2e4053;
+    padding-bottom: 8px;
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
+    font-size: 22px;
+}
+
+/* --- LIST STYLE --- */
 ul {
-    padding-left: 20px;
+    margin-left: 25px;
 }
 
 ul li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    font-size: 16px;
 }
 
-/* Code elements */
-code {
-    background: #eef1f5;
-    padding: 3px 5px;
-    border-radius: 5px;
-    font-size: 14px;
+/* --- PARAGRAPHS --- */
+p {
+    line-height: 1.7;
+    font-size: 16px;
 }
 
-/* Form Styling */
+/* --- CODE BLOCKS --- */
+pre, code {
+    background: #f4f6f7;
+    padding: 12px;
+    border-radius: 10px;
+    font-family: "Consolas", monospace;
+    font-size: 15px;
+    display: block;
+    border-left: 4px solid #3498db;
+    margin-top: 10px;
+    color: #273746;
+}
+
+/* --- FORM STYLE --- */
 form {
-    background: #fafbfd;
+    background: #f8fbff;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
     margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+/* subtle hover effect */
+form:hover {
+    transform: scale(1.02);
 }
 
 label {
@@ -66,34 +94,46 @@ input[type="date"],
 textarea,
 select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 6px;
+    margin-bottom: 15px;
     border: 1px solid #ccd1d9;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 15px;
-    transition: border 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
     border-color: #2980b9;
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.3);
     outline: none;
 }
 
-/* Submit Button */
+/* --- BUTTON STYLE --- */
 button {
     width: 100%;
-    padding: 12px;
-    background: #2980b9;
+    padding: 14px;
+    background: #3498db;
     border: none;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 8px;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background: #2471a3;
+    background: #2e86c1;
+    box-shadow: 0 8px 18px rgba(52, 152, 219, 0.4);
+}
+
+/* --- SECTION HIGHLIGHT CARDS --- */
+.section-card {
+    background: #fdfefe;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
 }
